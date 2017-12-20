@@ -21,3 +21,27 @@ Post Detail View
 Create/Edit View
   should have a form to create new post or edit existing posts
   when editing, existing data should be populated in the form
+
+State:
+  Post:
+    -id - string
+    -timestamp -integer
+    -title - string
+    -body - string
+    -author - string
+    -category - string
+    -voteScore - integer
+    -deleted - boolean
+  Comment
+    -id - string
+    -parentId -string
+    -timestamp -integer
+    -body - string
+    -author - string
+    -voteScore - integer
+    -deleted - boolean
+    -parentDeleted - boolean
+
+2 page templates
+  -default and category pages are similar
+  -post and create/edit are similar
