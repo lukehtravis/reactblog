@@ -1,36 +1,38 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {connect} from 'react-redux';
 
 class App extends Component {
   render() {
+
     return (
       <div className="App">
-        <div class="body">
-          <div class="categories">
-            <div class="individualcategory">
+        <div className="body">
+          <div className="categories">
+            <div className="individualcategory">
               <a></a>
             </div>
           </div>
-          <div class="posts">
-            <h2 class="posttitle"></h2>
-            <div class="author"></div>
-            <div class="postdate"></div>
-            <div class="postbody"></div>
-            <div class="votescore"></div>
-            <div class="addcomment"></div>
-            <div class="comments">
-              <div class="addcomment"></div>
-              <div class="comment">
-                <div class="commentdate"></div>
-                <div class="commentauthor"></div>
-                <div class="commentbody"></div>
-                <div class="commentvotes"></div>
+          <div className="posts">
+            <h2 className="posttitle"></h2>
+            <div className="author"></div>
+            <div className="postdate"></div>
+            <div className="postbody"></div>
+            <div className="votescore"></div>
+            <div className="addcomment"></div>
+            <div className="comments">
+              <div className="addcomment"></div>
+              <div className="comment">
+                <div className="commentdate"></div>
+                <div className="commentauthor"></div>
+                <div className="commentbody"></div>
+                <div className="commentvotes"></div>
               </div>
             </div>
           </div>
-          <div class="adddeletebutton">
-            <button class="add">
+          <div className="adddeletebutton">
+            <button className="add"></button>
           </div>
         </div>
       </div>
@@ -38,4 +40,8 @@ class App extends Component {
   }
 }
 
-export default App;
+function mapStateToProps(bigStore) {
+  return bigStore
+}
+
+export default connect(mapStateToProps)(App);

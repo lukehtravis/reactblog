@@ -45,3 +45,14 @@ State:
 2 page templates
   -default and category pages are similar
   -post and create/edit are similar
+
+actions
+-create post
+-edit post
+-delete post
+-upvote post
+
+-create comment
+-edit comment
+-delete comment
+-upvote comment

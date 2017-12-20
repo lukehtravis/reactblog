@@ -2,7 +2,7 @@
 
 React Blog
 
-This repository includes the code for the backend API Server that holds all comments etc
+This repository includes the code for the backend API Server that holds all comments and posts
 
 ## Start Developing
 
