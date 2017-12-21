@@ -2,17 +2,13 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {connect} from 'react-redux';
-
+import CategoryList from './components/CategoryList.js'
 class App extends Component {
   render() {
     return (
       <div className="App">
         <div className="body">
-          <div className="categories">
-            <div className="individualcategory">
-              <a></a>
-            </div>
-          </div>
+          <CategoryList></CategoryList>
           <div className="posts">
             <h2 className="posttitle"></h2>
             <div className="author"></div>
