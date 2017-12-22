@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {connect} from 'react-redux';
-import CategoryList from './components/CategoryList.js'
-import CommentList from './components/CommentList.js'
+import CategoryList from './components/CategoryList.js';
+import CommentList from './components/CommentList.js';
+import PostList from './components/PostList.js'
 
 class App extends Component {
   render() {
@@ -11,14 +12,7 @@ class App extends Component {
       <div className="App">
         <div className="body">
           <CategoryList></CategoryList>
-          <div className="posts">
-            <h2 className="posttitle"></h2>
-            <div className="author"></div>
-            <div className="postdate"></div>
-            <div className="postbody"></div>
-            <div className="votescore"></div>
-            <CommentList></CommentList>
-          </div>
+          <PostList></PostList>
           <div className="adddeletebutton">
             <button className="add"></button>
           </div>
