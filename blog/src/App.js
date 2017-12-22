@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import {connect} from 'react-redux';
 import CategoryList from './components/CategoryList.js'
+import CommentList from './components/CommentList.js'
+
 class App extends Component {
   render() {
     return (
@@ -15,16 +17,7 @@ class App extends Component {
             <div className="postdate"></div>
             <div className="postbody"></div>
             <div className="votescore"></div>
-            <div className="addcomment"></div>
-            <div className="comments">
-              <div className="addcomment"></div>
-              <div className="comment">
-                <div className="commentdate"></div>
-                <div className="commentauthor"></div>
-                <div className="commentbody"></div>
-                <div className="commentvotes"></div>
-              </div>
-            </div>
+            <CommentList></CommentList>
           </div>
           <div className="adddeletebutton">
             <button className="add"></button>
