@@ -18,9 +18,9 @@ class App extends Component {
 
     const getMethod = { method: "GET" };
 
-    fetch(`${url}/posts`, { headers }, { getMethod }).then(res =>
+    /*fetch(`${url}/posts`, { headers }, { getMethod }).then(res =>
       res.json().then(json => {console.log(json)})
-    );
+    );*/
 
 
     return (
