@@ -1,12 +1,31 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import {
+  fetchPosts
+} from './actions/index.js';
 import './App.css';
 import {connect} from 'react-redux';
 import CategoryList from './components/CategoryList.js';
 import CommentList from './components/CommentList.js';
 import PostList from './components/PostList.js'
+import * as api from "./utils/api.js";
 
 class App extends Component {
+  state = {
+    posts: {}
+  }
+
+
+
+
+  /*componentDidMount() {
+    this.props.fetchPosts()
+      .then(result => result.posts)
+      .then(result => {
+        this.setState({ posts: result })
+      })
+  }*/
+
   render() {
     const url = 'http://localhost:3001';
     const KEY = 'KEY';
@@ -16,12 +35,6 @@ class App extends Component {
       'Authorization': KEY
     };
 
-    const getMethod = { method: "GET" };
-
-    /*fetch(`${url}/posts`, { headers }, { getMethod }).then(res =>
-      res.json().then(json => {console.log(json)})
-    );*/
-
 
     return (
       <div className="App">
@@ -29,7 +42,8 @@ class App extends Component {
           <CategoryList></CategoryList>
           <PostList></PostList>
           <div className="adddeletebutton">
-            <button className="add"></button>
+            <button onClick={this.test} className="add">click</button>
+
           </div>
         </div>
       </div>
@@ -37,8 +51,5 @@ class App extends Component {
   }
 }
 
-function mapStateToProps(bigStore) {
-  return bigStore
-}
-
-export default connect(mapStateToProps)(App);
+//export default connect(mapStateToProps, {fetchPosts})(App);
+export default App;
