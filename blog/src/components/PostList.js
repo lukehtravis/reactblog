@@ -23,8 +23,8 @@ class PostList extends Component {
   }
 }
 
-const mapStateToProps = ({posts}) => {
-  return { posts };
+const mapStateToProps = (post) => {
+  return  post ;
 };
 
 export default connect(mapStateToProps, {fetchPosts})(PostList);
